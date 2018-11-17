@@ -15,7 +15,7 @@ class CreateProcedureInsertCoordenador extends Migration
     {
         DB::unprepared('DROP PROCEDURE IF EXISTS insert_Coordenadores ;
         CREATE PROCEDURE insert_Coordenadores(cpf varchar(45), rg varchar(45), nome varchar(45), email varchar(45), 
-        senha varchar(45), id_acao int, intSIAPE_Coo INT,  Cargo_Coo VARCHAR(45),
+        senha longtext, id_acao int, intSIAPE_Coo INT,  Cargo_Coo VARCHAR(45),
         cursos_codCurso INT)
         
         BEGIN
