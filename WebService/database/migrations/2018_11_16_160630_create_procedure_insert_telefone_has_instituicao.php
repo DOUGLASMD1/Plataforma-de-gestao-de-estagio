@@ -16,7 +16,7 @@ class CreateProcedureInsertTelefoneHasInstituicao extends Migration
         DB::unprepared('drop procedure if exists insert_telefones_has_instituicoes ;
         CREATE PROCEDURE insert_telefones_has_instituicoes(Tel_TI VARCHAR(15), InstCNPJ_TI VARCHAR(45))
     begin
-        insert into telefones_has_Instituicoes(tel_telefone, instituicao_CNPJ, created_at, updated_at, deleted_at) 
+        insert into telefones_has_instituicoes(tel_telefone, instituicao_CNPJ, created_at, updated_at, deleted_at) 
             values(Tel_TI, InstCNPJ_TI,NOW(), NOW(), NULL);  
     end ; ');
     }
