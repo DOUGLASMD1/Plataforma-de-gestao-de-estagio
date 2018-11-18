@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0578c3962a64be07c1dfba4cb57637f",
+    "content-hash": "9c88b3361dc50a4e0ef365b289a987ab",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -656,6 +656,45 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2017-06-27T22:17:23+00:00"
+        },
+        {
+            "name": "geekcom/validator-docs",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geekcom/validator-docs.git",
+                "reference": "43a83ee2e1a31a4e1ac3ef8741de5ac63bdb6081"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geekcom/validator-docs/zipball/43a83ee2e1a31a4e1ac3ef8741de5ac63bdb6081",
+                "reference": "43a83ee2e1a31a4e1ac3ef8741de5ac63bdb6081",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*"
+            },
+            "require-dev": {
+                "laravel/laravel": "5.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "geekcom\\ValidatorDocs\\": "src/validator-docs"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Rodrigues Lima",
+                    "email": "danielrodrigues-ti@hotmail.com"
+                }
+            ],
+            "description": "Biblioteca para validação de Título de Eleitor, CPF, CNPJ e CNH",
+            "time": "2018-04-20T14:49:42+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

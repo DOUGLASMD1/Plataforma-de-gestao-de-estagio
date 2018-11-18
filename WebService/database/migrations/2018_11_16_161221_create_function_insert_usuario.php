@@ -15,7 +15,7 @@ class CreateFunctionInsertUsuario extends Migration
     {
         DB::unprepared('drop function if exists insert_Usuario ;
         CREATE FUNCTION insert_Usuario(cpfis varchar(45), rg varchar(45), nome varchar(45),
-    email varchar(45), senha varchar(45), acao_idacao int)
+    email varchar(45), senha longtext, acao_idacao int)
     
     returns varchar(45)
     begin
