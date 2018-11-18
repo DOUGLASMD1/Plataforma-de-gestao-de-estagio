@@ -1,16 +1,19 @@
 <template>
-  <div class="">
-      <h2> Social </h2>
+  <site-template>
 
-  </div>
+  </site-template>
 </template>
 
 <script>
+import SiteTemplate from '@/templates/SiteTemplate'
+
 export default {
   name: 'Home',
   data () {
     return {
     }
+  }, components:{
+    SiteTemplate
   }
 }
 </script>
