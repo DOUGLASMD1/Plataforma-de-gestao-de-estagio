@@ -15,7 +15,7 @@ class CreateProcedureInsertAluno extends Migration
     {
         DB::unprepared('drop PROCEDURE if exists insert_aluno ;
         CREATE PROCEDURE insert_aluno(RGAALUNO varchar(25), sem_atual varchar(25),cursos_codCurso INT, cpf varchar(45), 
-        rg varchar(45), nome varchar(45), email varchar(45), senha varchar(45), id_acao int,
+        rg varchar(45), nome varchar(45), email varchar(45), senha longtext, id_acao int,
         rua varchar(45),numero varchar(45), bairro varchar(45), cidade varchar(25),cep varchar(45), 
         estado varchar(45), complemento varchar(45), telefoneAluno varchar(15))
         

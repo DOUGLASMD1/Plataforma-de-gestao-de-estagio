@@ -16,7 +16,7 @@ class CreateProcedureInsertSupervisor extends Migration
         DB::unprepared('drop procedure if exists insert_Supervisor ;
 
         CREATE PROCEDURE insert_Supervisor(cargo varchar(45),  areaAtuacao varchar(45), /* Supervisor */
-        cpfis varchar(45), rg varchar(45), nome varchar(45),email varchar(45), senha varchar(45), acao_idacao varchar(45),  /* Usuário */
+        cpfis varchar(45), rg varchar(45), nome varchar(45),email varchar(45), senha longtext, acao_idacao varchar(45),  /* Usuário */
         cnpj varchar(45), nomeEmpresa varchar(45), nome_repre varchar(45), ramo varchar(45),
         rua varchar(45),numero varchar(45), bairro varchar(45), cidade varchar(25),cep varchar(45), 
         estado varchar(45), complemento varchar(45), telefone varchar(45)) /* Empresa */
