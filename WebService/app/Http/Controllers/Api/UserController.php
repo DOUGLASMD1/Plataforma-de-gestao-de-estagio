@@ -36,5 +36,9 @@ class UserController extends Controller
             return response()->json(['error' => 'Unauthorised'], 401);
         }
     }
+
+    public function userDetails(Request $request){
+        return $request->user();
+    }
 }
     
