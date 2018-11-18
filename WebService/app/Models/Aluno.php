@@ -8,6 +8,8 @@
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Facades\DB;
+
 
 /**
  * Class Aluno
@@ -45,6 +47,30 @@ class Aluno extends Eloquent
 		'users_cpf',
 		'cursos_codCurso'
 	];
+
+	public static function InsertAluno($data)
+	{
+		$data['password'] = \Hash::make($data['password']);	
+		DB::select('call insert_aluno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',array(
+			$data['Rga'],
+			$data['SemestreAtual'],
+			$data['Curso'],
+			$data['cpf'],
+			$data['rg'],
+			$data['nome'],
+			$data['email'],
+			$data['password'],
+			$data['role'],
+			$data['rua'],
+			$data['numero'],
+			$data['bairro'],
+			$data['cidade'],
+			$data['cep'],
+			$data['estado'],
+			$data['complemento'],
+			$data['telefone'],
+		));
+	}
 
 	public function curso()
 	{
