@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2018 às 20:20
+-- Generation Time: 18-Nov-2018 às 20:28
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -140,9 +140,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_INSTITUICAO` (`CNPJ` VARCHAR
         END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_roles` (`NOME` VARCHAR(100))  begin   
-     insert into roles(nome, created_at, updated_at, deleted_at) 
-     values(NOME, NOW(), NOW(), NULL);
-END$$
+        insert into roles(nome, created_at, updated_at, deleted_at) 
+        values(NOME, NOW(), NOW(), NULL);
+        END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_Supervisor` (`cargo` VARCHAR(45), `areaAtuacao` VARCHAR(45), `cpfis` VARCHAR(45), `rg` VARCHAR(45), `nome` VARCHAR(45), `email` VARCHAR(45), `senha` LONGTEXT, `acao_idacao` VARCHAR(45), `cnpj` VARCHAR(45), `nomeEmpresa` VARCHAR(45), `nome_repre` VARCHAR(45), `ramo` VARCHAR(45), `rua` VARCHAR(45), `numero` VARCHAR(45), `bairro` VARCHAR(45), `cidade` VARCHAR(25), `cep` VARCHAR(45), `estado` VARCHAR(45), `complemento` VARCHAR(45), `telefone` VARCHAR(45))  begin
             declare people varchar(45);
@@ -380,16 +380,16 @@ CREATE TABLE `campus` (
 --
 
 INSERT INTO `campus` (`nome`, `diretor`, `emailDirecao`, `site`, `instituicao_CNPJ`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('Câmpus de Aquidauana', 'Professor Dr. Auri Claudionei Matos Frübel', 'auri.frubel@ufms.br', 'cpaq.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Chapadão do Sul', 'Kleber Augusto Gastaldi', 'kleber.gastaldi@ufms.br', 'cpcs.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Coxim', 'Prof. Dra. Eliene Dias de Oliveira', 'cpcx@ufms.br', 'cpcx.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Naviraí', 'Daniel Henrique Lopes', '', 'cpnv.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Câmpus de Nova Andradina', 'Solange Fachin', 'direcao.cpna@ufms.br', 'cpna.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Câmpus de Paranaíba', 'Prof.ª Dr.ª Andréia Cristina Ribeiro', '', 'cpar.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus de Ponta Porã', 'Cláudia Carreira da Rosa', 'cppp@ufms.br', 'cppp.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus de Três Lagoas', 'Prof. Dr. Osmar Jesus Macedo', ' gab.cptl@ufms.br', 'cptl.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus do Pantanal – Corumbá', 'Professor Dr. Aguinaldo Silva', 'secdir.cpan@ufms.br', 'cpan.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Cidade Universitária – Campo Grande', 'Professor Marcelo Augusto Santos Turine', 'reitoria@ufms.br', 'www.ufms.br', '15.461.510/0001-33', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL);
+('Câmpus de Aquidauana', 'Professor Dr. Auri Claudionei Matos Frübel', 'auri.frubel@ufms.br', 'cpaq.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('Câmpus de Chapadão do Sul', 'Kleber Augusto Gastaldi', 'kleber.gastaldi@ufms.br', 'cpcs.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('Câmpus de Coxim', 'Prof. Dra. Eliene Dias de Oliveira', 'cpcx@ufms.br', 'cpcx.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('Câmpus de Naviraí', 'Daniel Henrique Lopes', '', 'cpnv.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Nova Andradina', 'Solange Fachin', 'direcao.cpna@ufms.br', 'cpna.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Paranaíba', 'Prof.ª Dr.ª Andréia Cristina Ribeiro', '', 'cpar.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Ponta Porã', 'Cláudia Carreira da Rosa', 'cppp@ufms.br', 'cppp.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('Câmpus de Três Lagoas', 'Prof. Dr. Osmar Jesus Macedo', ' gab.cptl@ufms.br', 'cptl.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('Câmpus do Pantanal – Corumbá', 'Professor Dr. Aguinaldo Silva', 'secdir.cpan@ufms.br', 'cpan.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Cidade Universitária – Campo Grande', 'Professor Marcelo Augusto Santos Turine', 'reitoria@ufms.br', 'www.ufms.br', '15.461.510/0001-33', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -410,16 +410,16 @@ CREATE TABLE `campus_has_telefones` (
 --
 
 INSERT INTO `campus_has_telefones` (`campus_nome`, `telefones_telefone`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('Câmpus de Aquidauana', '(067) 3241-0450', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Chapadão do Sul', '(67) 3562-6300', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Coxim', '(067) 3291-0202', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('Câmpus de Naviraí', '(67) 3409-3401', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Câmpus de Nova Andradina', '(067) 3349-0500', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Câmpus de Paranaíba', '(67) 3669-0102', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus de Ponta Porã', '(067) 3437-1700', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus de Três Lagoas', '(67) 3509-3400', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('Câmpus do Pantanal – Corumbá', '(067) 3234-6813', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('Cidade Universitária – Campo Grande', '(67) 3345-7000', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL);
+('Câmpus de Aquidauana', '(067) 3241-0450', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('Câmpus de Chapadão do Sul', '(67) 3562-6300', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('Câmpus de Coxim', '(067) 3291-0202', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Naviraí', '(67) 3409-3401', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Nova Andradina', '(067) 3349-0500', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Paranaíba', '(67) 3669-0102', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Câmpus de Ponta Porã', '(067) 3437-1700', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('Câmpus de Três Lagoas', '(67) 3509-3400', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('Câmpus do Pantanal – Corumbá', '(067) 3234-6813', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('Cidade Universitária – Campo Grande', '(67) 3345-7000', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -458,155 +458,155 @@ CREATE TABLE `cursos` (
 --
 
 INSERT INTO `cursos` (`codCurso`, `nomeCurso`, `regulamentoEstagio`, `campus_nome`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(413, 'Letras – Português/Espanhol', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(432, 'Letras – Português/Inglês', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(439, 'História', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(440, 'Letras – Português/Inglês', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(441, 'Letras - Português/Literatura', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(443, 'Geografia', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(446, 'Ciências Biológicas', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(447, 'Matemática', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(448, 'Turismo', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(450, 'Administração', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(451, 'Geografia', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(453, 'Letras – Português/Espanhol', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(457, 'Matemática', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(459, 'Licenciatura Intercultural Indígena', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(460, 'Licenciatura Intercultural Indígena - Linguagens/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(461, 'Licenciatura Intercultural Indígena - Matemática/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(462, 'Licenciatura Intercultural Indígena - Ciências da Natureza/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(463, 'Licenciatura Intercultural Indígena - Ciências Sociais/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:38', '2018-11-18 19:19:38', NULL),
-(464, 'Turismo', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(513, 'Letras – Português/Espanhol', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(525, 'Letras – Português/Inglês', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(541, 'Direito', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(547, 'Administração', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(548, 'Ciências Contábeis', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(549, 'Geografia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(550, 'História', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(551, 'Letras – Português/Inglês', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(552, 'Ciências Biológicas', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(553, 'Matemática', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(562, 'Psicologia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(567, 'Letras – Português/Espanhol', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(568, 'Pedagogia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(569, 'Educação Física', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(570, 'Sistemas de Informação', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(722, 'Letras – Português/Espanhol', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(728, 'Pedagogia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(739, 'Direito', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(740, 'Letras – Português/Literatura', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(742, 'Letras – Português/Espanhol', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(743, 'Sistemas de Informação', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(744, 'Medicina', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(745, 'Letras – Português/Inglês', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(780, 'Geografia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(781, 'Direito', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(783, 'História', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(784, 'Letras – Português/Inglês', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(788, 'Ciências Biológicas', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(789, 'Matemática', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(793, 'Administração', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(795, 'Ciências Contábeis', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(796, 'Geografia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(798, 'Enfermagem', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(799, 'Engenharia de Produção', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(801, 'História', '', 'Câmpus de Coxim', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(802, 'Letras – Português/Espanhol', '', 'Câmpus de Coxim', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(803, 'Sistemas de Informação', '', 'Câmpus de Coxim', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(804, 'Enfermagem', '', 'Câmpus de Coxim', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(805, 'Letras - Português', '', 'Câmpus de Coxim', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(901, 'Administração', '', 'Câmpus de Paranaíba', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(903, 'Psicologia', '', 'Câmpus de Paranaíba', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(904, 'Matemática', '', 'Câmpus de Paranaíba', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1002, 'Medicina', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(1101, 'Odontologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(1102, 'Odontologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(1201, 'Medicina Veterinária', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(1203, 'Zootecnica', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(1302, 'Administração', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1303, 'Agronomia', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1304, 'Administração', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1403, 'Administração', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1404, 'História', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(1405, 'Administração', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1406, 'Gestão Financeira', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(1407, 'Ciências Contábeis', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(1408, 'Engenharia de Produção', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:40', '2018-11-18 19:19:40', NULL),
-(1701, 'Ciências Sociais', '', 'Câmpus de Naviraí', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1702, 'Pedagogia', '', 'Câmpus de Naviraí', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1703, 'Administração', '', 'Câmpus de Naviraí', '2018-11-18 19:19:39', '2018-11-18 19:19:39', NULL),
-(1801, 'Matemática', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1802, 'Sistemas de Informação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1803, 'Pedagogia', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1804, 'Ciência da Computação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1805, 'Ciência da Computação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:41', '2018-11-18 19:19:41', NULL),
-(1901, 'Curso Superior de Tecnologia em Redes de Computadores', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(1902, 'Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(1904, 'Ciência da Computação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(1905, 'Engenharia da Computação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(1906, 'Engenharia de Software', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(1907, 'Sistemas de Informação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(2001, 'Direito', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(2002, 'Direito', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(2101, 'Arquitetura e Urbanismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2102, 'Engenharia Civil', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2103, 'Engenharia Elétrica', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2104, 'Engenharia Ambiental', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2105, 'Curso Superior de Tecnologia em Eletrotécnica Industrial', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2106, 'Engenharia de Produção', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2107, 'Curso Superior de Tecnologia em Construção de Edifícios', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2108, 'Curso Superior de Tecnologia em Saneamento Ambiental', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2109, 'Geografia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2111, 'Engenharia Civil', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2191, 'Geografia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(2201, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2202, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2291, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2301, 'Química', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2302, 'Química', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2401, 'Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2402, 'Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2501, 'Administração', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(2502, 'Administração', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(2503, 'Turismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2504, 'Ciências Contábeis', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2505, 'Curso Superior em Tecnologia em Processos Gerenciais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2506, 'Ciências Econômicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2591, 'Administração Pública', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:42', '2018-11-18 19:19:42', NULL),
-(2601, 'Farmácia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2602, 'Nutrição', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(2603, 'Curso Superior em Tecnologia em Alimentos', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2701, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2702, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2703, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2791, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2801, 'Enfermagem', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2802, 'Fisioterapia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:46', '2018-11-18 19:19:46', NULL),
-(2901, 'Artes Visuais Licenciatura', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2902, 'Letras – Português/Inglês', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2903, 'Comunicação Social', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2904, 'Artes Visuais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2905, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2906, 'Música - Licenciatura', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2907, 'Jornalismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2908, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2909, 'Letras – Português/Inglês', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(2991, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:43', '2018-11-18 19:19:43', NULL),
-(3001, 'Ciências Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3002, 'História', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3003, 'Psicologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3004, 'Filosofia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3005, 'Ciências Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3101, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(3102, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(3103, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(3104, 'Educação do Campo - Licenciatura - Habilitação em Ciências Humanas e Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3105, 'Educação do Campo - Licenciatura - Habilitação em Linguagens e Códigos', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3106, 'Educação do Campo - Licenciatura - Habilitação em Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:44', '2018-11-18 19:19:44', NULL),
-(3107, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(3191, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL),
-(3192, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:45', '2018-11-18 19:19:45', NULL);
+(413, 'Letras – Português/Espanhol', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(432, 'Letras – Português/Inglês', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(439, 'História', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(440, 'Letras – Português/Inglês', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(441, 'Letras - Português/Literatura', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(443, 'Geografia', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(446, 'Ciências Biológicas', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(447, 'Matemática', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(448, 'Turismo', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(450, 'Administração', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(451, 'Geografia', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(453, 'Letras – Português/Espanhol', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(457, 'Matemática', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(459, 'Licenciatura Intercultural Indígena', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(460, 'Licenciatura Intercultural Indígena - Linguagens/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(461, 'Licenciatura Intercultural Indígena - Matemática/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(462, 'Licenciatura Intercultural Indígena - Ciências da Natureza/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:08', '2018-11-18 19:27:08', NULL),
+(463, 'Licenciatura Intercultural Indígena - Ciências Sociais/Educação Intercultural', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(464, 'Turismo', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(513, 'Letras – Português/Espanhol', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(525, 'Letras – Português/Inglês', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(541, 'Direito', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(547, 'Administração', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(548, 'Ciências Contábeis', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(549, 'Geografia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(550, 'História', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(551, 'Letras – Português/Inglês', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(552, 'Ciências Biológicas', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(553, 'Matemática', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(562, 'Psicologia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(567, 'Letras – Português/Espanhol', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(568, 'Pedagogia', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(569, 'Educação Física', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(570, 'Sistemas de Informação', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(722, 'Letras – Português/Espanhol', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(728, 'Pedagogia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(739, 'Direito', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(740, 'Letras – Português/Literatura', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(742, 'Letras – Português/Espanhol', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(743, 'Sistemas de Informação', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(744, 'Medicina', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(745, 'Letras – Português/Inglês', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(780, 'Geografia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(781, 'Direito', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(783, 'História', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(784, 'Letras – Português/Inglês', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(788, 'Ciências Biológicas', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(789, 'Matemática', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(793, 'Administração', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(795, 'Ciências Contábeis', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(796, 'Geografia', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(798, 'Enfermagem', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(799, 'Engenharia de Produção', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(801, 'História', '', 'Câmpus de Coxim', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(802, 'Letras – Português/Espanhol', '', 'Câmpus de Coxim', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(803, 'Sistemas de Informação', '', 'Câmpus de Coxim', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(804, 'Enfermagem', '', 'Câmpus de Coxim', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(805, 'Letras - Português', '', 'Câmpus de Coxim', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(901, 'Administração', '', 'Câmpus de Paranaíba', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(903, 'Psicologia', '', 'Câmpus de Paranaíba', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(904, 'Matemática', '', 'Câmpus de Paranaíba', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1002, 'Medicina', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(1101, 'Odontologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(1102, 'Odontologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(1201, 'Medicina Veterinária', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(1203, 'Zootecnica', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(1302, 'Administração', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(1303, 'Agronomia', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(1304, 'Administração', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(1403, 'Administração', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1404, 'História', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1405, 'Administração', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1406, 'Gestão Financeira', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1407, 'Ciências Contábeis', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1408, 'Engenharia de Produção', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1701, 'Ciências Sociais', '', 'Câmpus de Naviraí', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1702, 'Pedagogia', '', 'Câmpus de Naviraí', '2018-11-18 19:27:10', '2018-11-18 19:27:10', NULL),
+(1703, 'Administração', '', 'Câmpus de Naviraí', '2018-11-18 19:27:09', '2018-11-18 19:27:09', NULL),
+(1801, 'Matemática', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1802, 'Sistemas de Informação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1803, 'Pedagogia', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1804, 'Ciência da Computação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1805, 'Ciência da Computação', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:11', '2018-11-18 19:27:11', NULL),
+(1901, 'Curso Superior de Tecnologia em Redes de Computadores', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(1902, 'Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(1904, 'Ciência da Computação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(1905, 'Engenharia da Computação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(1906, 'Engenharia de Software', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(1907, 'Sistemas de Informação', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(2001, 'Direito', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(2002, 'Direito', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(2101, 'Arquitetura e Urbanismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2102, 'Engenharia Civil', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2103, 'Engenharia Elétrica', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2104, 'Engenharia Ambiental', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2105, 'Curso Superior de Tecnologia em Eletrotécnica Industrial', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2106, 'Engenharia de Produção', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2107, 'Curso Superior de Tecnologia em Construção de Edifícios', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2108, 'Curso Superior de Tecnologia em Saneamento Ambiental', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2109, 'Geografia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2111, 'Engenharia Civil', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2191, 'Geografia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(2201, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2202, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2291, 'Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2301, 'Química', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2302, 'Química', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2401, 'Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2402, 'Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2501, 'Administração', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:12', '2018-11-18 19:27:12', NULL),
+(2502, 'Administração', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2503, 'Turismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2504, 'Ciências Contábeis', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2505, 'Curso Superior em Tecnologia em Processos Gerenciais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2506, 'Ciências Econômicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2591, 'Administração Pública', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2601, 'Farmácia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(2602, 'Nutrição', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(2603, 'Curso Superior em Tecnologia em Alimentos', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2701, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2702, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2703, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2791, 'Ciências Biológicas', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2801, 'Enfermagem', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2802, 'Fisioterapia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:16', '2018-11-18 19:27:16', NULL),
+(2901, 'Artes Visuais Licenciatura', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2902, 'Letras – Português/Inglês', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2903, 'Comunicação Social', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2904, 'Artes Visuais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2905, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2906, 'Música - Licenciatura', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2907, 'Jornalismo', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2908, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2909, 'Letras – Português/Inglês', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(2991, 'Letras – Português/Espanhol', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:13', '2018-11-18 19:27:13', NULL),
+(3001, 'Ciências Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3002, 'História', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3003, 'Psicologia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3004, 'Filosofia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3005, 'Ciências Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3101, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(3102, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(3103, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(3104, 'Educação do Campo - Licenciatura - Habilitação em Ciências Humanas e Sociais', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3105, 'Educação do Campo - Licenciatura - Habilitação em Linguagens e Códigos', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3106, 'Educação do Campo - Licenciatura - Habilitação em Matemática', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:14', '2018-11-18 19:27:14', NULL),
+(3107, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(3191, 'Pedagogia', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL),
+(3192, 'Educação Física', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:15', '2018-11-18 19:27:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -664,17 +664,17 @@ CREATE TABLE `enderecos` (
 --
 
 INSERT INTO `enderecos` (`idendereco`, `rua`, `numero`, `bairro`, `cidade`, `cep`, `estado`, `complemento`, `campus_nome`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Av. Costa e Silva', '', 'Bairro Universitário', 'Campo Grande', '79070-900 ', 'MS', '', NULL, '2018-11-18 19:19:30', '2018-11-18 19:19:30', NULL),
-(2, 'Rua Oscar Trindade de Barros', '740', 'Bairro da Serraria', 'Aquidauana', '79200-000', 'MS', '', 'Câmpus de Aquidauana', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-(3, 'Rodovia MS-306', '', '', 'Chapadão do Sul', '79560-000 ', 'MS', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-(4, 'Avenida Marcio Lima Nantes', '', 'Vila da Barra', 'Coxim', '79400-000', 'MS', '', 'Câmpus de Coxim', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-(5, 'Rodovia MS 141', 'Km 04', '', 'Naviraí', '79950-000', 'MS', 'Saída para Ivinhema', 'Câmpus de Naviraí', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-(6, ' Avenida Rosilene Lima Oliveira', '64', 'Bairro Universitário', 'Nova Andradina', '79750-000', 'MS', '', 'Câmpus de Nova Andradina', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-(7, 'Avenida Rio Branco', '', 'Bairro Universitário', 'Corumbá', ' 79304-902', 'MS', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-(8, 'Avenida Pedro Pedrossian', '725', 'Bairro Universitário', 'Paranaíba', '79.500-000', 'MS', '', 'Câmpus de Paranaíba', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-(9, 'Rua Itibiré Vieira', 'BR 463 – Km 4,5', 'Residencial Julia Oliveira Cardinal', 'Ponta Porã', '79907-414', 'MS', '', 'Câmpus de Ponta Porã', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-(10, 'Av Capitão Olinto Mancini', '1662', 'Jardim Primaveril', 'Três Lagoas', '79600-080', 'MS', '', 'Câmpus de Três Lagoas', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-(11, 'Av. Costa e Silva', '', 'Bairro Universitário', 'Campo Grande', '79070-900 ', 'MS', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL);
+(1, 'Av. Costa e Silva', '', 'Bairro Universitário', 'Campo Grande', '79070-900 ', 'MS', '', NULL, '2018-11-18 19:27:01', '2018-11-18 19:27:01', NULL),
+(2, 'Rua Oscar Trindade de Barros', '740', 'Bairro da Serraria', 'Aquidauana', '79200-000', 'MS', '', 'Câmpus de Aquidauana', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+(3, 'Rodovia MS-306', '', '', 'Chapadão do Sul', '79560-000 ', 'MS', '', 'Câmpus de Chapadão do Sul', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+(4, 'Avenida Marcio Lima Nantes', '', 'Vila da Barra', 'Coxim', '79400-000', 'MS', '', 'Câmpus de Coxim', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+(5, 'Rodovia MS 141', 'Km 04', '', 'Naviraí', '79950-000', 'MS', 'Saída para Ivinhema', 'Câmpus de Naviraí', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+(6, ' Avenida Rosilene Lima Oliveira', '64', 'Bairro Universitário', 'Nova Andradina', '79750-000', 'MS', '', 'Câmpus de Nova Andradina', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+(7, 'Avenida Rio Branco', '', 'Bairro Universitário', 'Corumbá', ' 79304-902', 'MS', '', 'Câmpus do Pantanal – Corumbá', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+(8, 'Avenida Pedro Pedrossian', '725', 'Bairro Universitário', 'Paranaíba', '79.500-000', 'MS', '', 'Câmpus de Paranaíba', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+(9, 'Rua Itibiré Vieira', 'BR 463 – Km 4,5', 'Residencial Julia Oliveira Cardinal', 'Ponta Porã', '79907-414', 'MS', '', 'Câmpus de Ponta Porã', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+(10, 'Av Capitão Olinto Mancini', '1662', 'Jardim Primaveril', 'Três Lagoas', '79600-080', 'MS', '', 'Câmpus de Três Lagoas', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+(11, 'Av. Costa e Silva', '', 'Bairro Universitário', 'Campo Grande', '79070-900 ', 'MS', '', 'Cidade Universitária – Campo Grande', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -757,7 +757,7 @@ CREATE TABLE `instituicao` (
 --
 
 INSERT INTO `instituicao` (`CNPJ`, `Razao_Social`, `email`, `site`, `tipoEnsino`, `enderecos_idendereco`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('15.461.510/0001-33', 'UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL', 'reitoria@ufms.br', 'www.ufms.br', 'Pub', 1, '2018-11-18 19:19:30', '2018-11-18 19:19:30', NULL);
+('15.461.510/0001-33', 'UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL', 'reitoria@ufms.br', 'www.ufms.br', 'Pub', 1, '2018-11-18 19:27:01', '2018-11-18 19:27:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -925,6 +925,13 @@ CREATE TABLE `oauth_clients` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `oauth_clients`
+--
+
+INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'ufms', '6EjclbTaMpulvjOYrfZuv4Y4DqEjfhgjNXDdDGc3', 'http://localhost', 1, 0, 0, '2018-11-18 19:27:56', '2018-11-18 19:27:56');
+
 -- --------------------------------------------------------
 
 --
@@ -937,6 +944,13 @@ CREATE TABLE `oauth_personal_access_clients` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `oauth_personal_access_clients`
+--
+
+INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
+(1, 1, '2018-11-18 19:27:56', '2018-11-18 19:27:56');
 
 -- --------------------------------------------------------
 
@@ -982,10 +996,10 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`idrole`, `nome`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Adm', '2018-11-18 19:19:49', '2018-11-18 19:19:49', NULL),
-(2, 'Coordenador', '2018-11-18 19:19:49', '2018-11-18 19:19:49', NULL),
-(3, 'Aluno', '2018-11-18 19:19:49', '2018-11-18 19:19:49', NULL),
-(4, 'Supervisor', '2018-11-18 19:19:50', '2018-11-18 19:19:50', NULL);
+(1, 'Adm', '2018-11-18 19:27:19', '2018-11-18 19:27:19', NULL),
+(2, 'Coordenador', '2018-11-18 19:27:20', '2018-11-18 19:27:20', NULL),
+(3, 'Aluno', '2018-11-18 19:27:20', '2018-11-18 19:27:20', NULL),
+(4, 'Supervisor', '2018-11-18 19:27:20', '2018-11-18 19:27:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -1021,17 +1035,17 @@ CREATE TABLE `telefones` (
 --
 
 INSERT INTO `telefones` (`telefone`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('(067) 3234-6813', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('(067) 3241-0450', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('(067) 3291-0202', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('(067) 3349-0500', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('(067) 3437-1700', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('(67) 3345-7000', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('(67) 3345-7001', '2018-11-18 19:19:30', '2018-11-18 19:19:30', NULL),
-('(67) 3409-3401', '2018-11-18 19:19:34', '2018-11-18 19:19:34', NULL),
-('(67) 3509-3400', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL),
-('(67) 3562-6300', '2018-11-18 19:19:33', '2018-11-18 19:19:33', NULL),
-('(67) 3669-0102', '2018-11-18 19:19:35', '2018-11-18 19:19:35', NULL);
+('(067) 3234-6813', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('(067) 3241-0450', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('(067) 3291-0202', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('(067) 3349-0500', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('(067) 3437-1700', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('(67) 3345-7000', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('(67) 3345-7001', '2018-11-18 19:27:01', '2018-11-18 19:27:01', NULL),
+('(67) 3409-3401', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL),
+('(67) 3509-3400', '2018-11-18 19:27:05', '2018-11-18 19:27:05', NULL),
+('(67) 3562-6300', '2018-11-18 19:27:03', '2018-11-18 19:27:03', NULL),
+('(67) 3669-0102', '2018-11-18 19:27:04', '2018-11-18 19:27:04', NULL);
 
 -- --------------------------------------------------------
 
@@ -1066,7 +1080,7 @@ CREATE TABLE `telefones_has_instituicoes` (
 --
 
 INSERT INTO `telefones_has_instituicoes` (`tel_telefone`, `instituicao_CNPJ`, `created_at`, `updated_at`, `deleted_at`) VALUES
-('(67) 3345-7001', '15.461.510/0001-33', '2018-11-18 19:19:30', '2018-11-18 19:19:30', NULL);
+('(67) 3345-7001', '15.461.510/0001-33', '2018-11-18 19:27:01', '2018-11-18 19:27:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -1373,13 +1387,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `oauth_clients`
 --
 ALTER TABLE `oauth_clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `oauth_personal_access_clients`
 --
 ALTER TABLE `oauth_personal_access_clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `roles`
