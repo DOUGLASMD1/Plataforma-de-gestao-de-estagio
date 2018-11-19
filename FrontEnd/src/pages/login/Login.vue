@@ -48,7 +48,7 @@ export default {
   }, methods:{
     login(){
       console.log('Ok');
-      axios.post(`http://127.0.0.1:8000/Api/login`,{
+      axios.post(`http://127.0.0.1:8000/api/login`,{
         email: this.email,
         password: this.password
       })
