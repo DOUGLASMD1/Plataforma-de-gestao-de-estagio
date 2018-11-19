@@ -5,11 +5,11 @@
 
       <nav-bar logo="Estágio" url="#/">
 
-          <li><a href="#/">Documentos Pendentes</a></li>
-          <li><a href="#/">Consultas</a></li>
-          <li><a href="#/cadastrar_vagas">Cadastrar Vagas</a></li>
-          <li><a href="#/cadastrar_regulamento">Cadastrar Regulamento</a></li>
-          <li><a href="#/login">Sair</a></li>
+          <li><router-link to="#">Documentos Pendentes</router-link></li>
+          <li><router-link to="#">Consultas</router-link></li>
+          <li><router-link to="/cadastrar_vagas">Cadastrar Vagas</router-link></li>
+          <li><router-link to="/cadastrar_regulamento">Cadastrar Regulamento</router-link></li>
+          <li><router-link to="/login">sair</router-link></li>
       </nav-bar>
     </header>
     
@@ -23,11 +23,8 @@
       </div>
     </main>
 
-    <footer-vue logo="Estágio" descricao="Informações sobre o estágio" ano="2018">
-        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+    <footer-vue logo="Sigest" descricao="Informações sobre o estágio" ano="2018">
+
     </footer-vue>
     
   </span>

@@ -3,12 +3,11 @@
 
     <header>
       <nav-bar logo="Estágio" url="#/">
-          <li><a href="#/login">Login</a></li>
-          <li><a href="#/">Avisos</a></li>
-          <li><a href="#/">Documentos Pendentes</a></li>
-          <li><a href="#/">Documentos Analisados</a></li>
-          <li><a href="#/">Consultas</a></li>
-          <li><a href="#/">Supervisores</a></li>
+          <li><router-link to="#">Documentos Pendentes</router-link></li>
+          <li><router-link to="#">Consultas</router-link></li>
+          <li><router-link to="#">Status</router-link></li>
+          <li><router-link to="#">Documentos</router-link></li>
+          <li><router-link to="/login">sair</router-link></li>
       </nav-bar>
     </header>
     
@@ -22,11 +21,8 @@
       </div>
     </main>
 
-    <footer-vue logo="Estágio" descricao="Informações sobre o estágio" ano="2018">
-        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+    <footer-vue logo="Sigest" descricao="Informações sobre o estágio" ano="2018">
+
     </footer-vue>
     
   </span>

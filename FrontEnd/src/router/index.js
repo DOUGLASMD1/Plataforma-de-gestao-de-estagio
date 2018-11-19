@@ -8,6 +8,7 @@ import CadastrarRegulamento from '@/pages/CadastrarRegulamento/CadastrarRegulame
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
