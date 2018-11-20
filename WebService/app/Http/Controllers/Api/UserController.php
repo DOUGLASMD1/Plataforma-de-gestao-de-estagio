@@ -33,7 +33,7 @@ class UserController extends Controller
             return $user;
         }else
         {
-            return response()->json(['error' => 'Unauthorised'], 401);
+            return response()->json(['error' => 'email ou senha incorretos'], 401);
         }
     }
 
