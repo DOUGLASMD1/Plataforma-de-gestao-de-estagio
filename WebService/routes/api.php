@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 
 Route::post('/login', 'Api\UserController@login');
-Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 
 Route::middleware('auth:api')->group( function () {
     Route::post('/register-coordenador', 'Api\CoordenadorController@register');
