@@ -26,6 +26,6 @@ class CreateTriggerStatusEstagio extends Migration
      */
     public function down()
     {
-        DB::unprepared('');
+        DB::unprepared('DROP TRIGGER IF EXISTS tr_status_estagio');
     }
 }
