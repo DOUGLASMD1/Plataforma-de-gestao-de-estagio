@@ -4,9 +4,12 @@ Esta aplicação é um projeto final da matéria de Programação web do curso d
 
 Backend:<br />
 1 - Importe o banco de dados da pasta BancodeDados <br />
-2 - Execute o comando: composer update <br />
-3 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
-4 - Rode o servidor: php artisan serve <br />
+2 - Execute o comando a seguir para gerar a pasta vendor: composer update <br />
+3 - Renomeie o arquivo .env.example para: .env<br />
+4 - Adicione as configurações da conexão com o banco no arquivo .env. Vale lembrar que você deve usar o nome do banco importado na etapa 1.<br />
+5 - Gere a chave do projeto com o comando: php artisan key:generate<br />
+6 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
+7 - Rode o servidor: php artisan serve <br />
 
 FrontEnd:<br />
 1 - npm i<br />
