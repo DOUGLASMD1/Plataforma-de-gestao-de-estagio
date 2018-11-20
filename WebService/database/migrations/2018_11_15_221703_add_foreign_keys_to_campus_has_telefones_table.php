@@ -15,7 +15,7 @@ class AddForeignKeysToCampusHasTelefonesTable extends Migration {
 		Schema::table('campus_has_telefones', function(Blueprint $table)
 		{
 			$table->foreign('campus_nome')->references('nome')->on('campus')->onUpdate('CASCADE')->onDelete('CASCADE');
-			$table->foreign('telefones_telefone')->references('telefone')->on('telefones')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('telefones_telefone')->references('idTelefone')->on('telefones')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 

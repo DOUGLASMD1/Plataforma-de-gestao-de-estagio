@@ -14,7 +14,8 @@ class CreateTelefonesTable extends Migration {
 	{
 		Schema::create('telefones', function(Blueprint $table)
 		{
-			$table->string('telefone', 15)->primary();
+			$table->integer('idTelefone', true);
+			$table->string('telefone', 20);
 			$table->timestamps();
 			$table->softDeletes();
 		});

@@ -15,7 +15,7 @@ class CreateCampusHasTelefonesTable extends Migration {
 		Schema::create('campus_has_telefones', function(Blueprint $table)
 		{
 			$table->string('campus_nome', 45);
-			$table->string('telefones_telefone', 15);
+			$table->integer('telefones_telefone');
 			$table->timestamps();
 			$table->softDeletes();
 			$table->primary(['campus_nome','telefones_telefone']);

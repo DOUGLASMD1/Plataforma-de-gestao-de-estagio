@@ -14,8 +14,8 @@ class CreateTelefonesHasEmpresasTable extends Migration {
 	{
 		Schema::create('telefones_has_empresas', function(Blueprint $table)
 		{
-			$table->string('telefones_telefone', 15);
-			$table->string('empresas_cnpj', 45);
+			$table->integer('telefones_telefone');
+			$table->string('empresas_cnpj',15);
 			$table->timestamps();
 			$table->softDeletes();
 			$table->primary(['telefones_telefone','empresas_cnpj']);

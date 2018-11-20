@@ -17,14 +17,14 @@ class CreateFunctionInsertTelefone extends Migration
         
         CREATE FUNCTION Insert_Telefone(Telefone_IT VARCHAR(15))
         
-        returns varchar(15) 
+        returns INT 
         begin
         
-        DECLARE telaux varchar(15);
+        DECLARE telaux INT;
         
         insert into telefones(telefone, created_at, updated_at, deleted_at) values(Telefone_IT, NOW(), NOW(), NULL);
         
-        select telefones.telefone into telaux from telefones where telefones.telefone = Telefone_IT;
+        SELECT MAX(idTelefone) INTO telaux FROM telefones;
         
         return telaux;
         end; ');

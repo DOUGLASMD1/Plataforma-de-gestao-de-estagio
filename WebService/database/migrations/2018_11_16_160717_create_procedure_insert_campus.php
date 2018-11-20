@@ -21,7 +21,7 @@ class CreateProcedureInsertCampus extends Migration
         
         begin
         DECLARE CAMPUS VARCHAR(45);
-        DECLARE telefoneaux VARCHAR(15);
+        DECLARE telefoneaux INT;
         DECLARE endaux INT;
         
         INSERT INTO campus(nome, diretor, emaildirecao, site, instituicao_CNPJ,created_at, updated_at, deleted_at) 

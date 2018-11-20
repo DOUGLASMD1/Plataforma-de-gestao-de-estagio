@@ -14,8 +14,8 @@ class CreateTelefonesHasInstituicoesTable extends Migration {
 	{
 		Schema::create('telefones_has_instituicoes', function(Blueprint $table)
 		{
-			$table->string('tel_telefone', 15);
-			$table->string('instituicao_CNPJ', 45);
+			$table->integer('tel_telefone');
+			$table->string('instituicao_CNPJ',45);
 			$table->timestamps();
 			$table->softDeletes();
 			$table->primary(['tel_telefone','instituicao_CNPJ']);
