@@ -36,7 +36,7 @@ class CreateEnderecosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('enderecos');
+		Schema::dropIfExists('enderecos');
 	}
 
 }

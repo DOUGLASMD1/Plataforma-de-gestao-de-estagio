@@ -32,7 +32,7 @@ class CreateCoordenadoresTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('coordenadores');
+		Schema::dropIfExists('coordenadores');
 	}
 
 }

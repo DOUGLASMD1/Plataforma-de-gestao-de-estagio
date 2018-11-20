@@ -30,7 +30,7 @@ class CreateAlunosHasTelefonesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('alunos_has_telefones');
+		Schema::dropIfExists('alunos_has_telefones');
 	}
 
 }

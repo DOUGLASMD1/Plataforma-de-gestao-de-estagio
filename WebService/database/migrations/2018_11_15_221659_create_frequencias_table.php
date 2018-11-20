@@ -34,7 +34,7 @@ class CreateFrequenciasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('frequencias');
+		Schema::dropIfExists('frequencias');
 	}
 
 }

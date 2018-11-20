@@ -15,11 +15,13 @@ class CreateArquivosTable extends Migration {
 		Schema::create('arquivos', function(Blueprint $table)
 		{
 			$table->integer('idarquivo', true);
-			$table->enum('tipo_arquivo', array('TC','PA','RFA','RFS'));
-			$table->binary('arquivo');
-			$table->string('alunos_rga', 20);
-			$table->string('supervisor',45)->nullable();
-			$table->enum('status', array('A','P'))->nullable();
+			$table->string('filename');
+            $table->string('tipo');
+            $table->string('path');
+            $table->integer('size');
+			$table->integer('coor_siape')->nullable();
+			$table->string('aluno_rga',20)->nullable();
+			$table->string('super_users_cpf',45)->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 		});
@@ -33,7 +35,7 @@ class CreateArquivosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('arquivos');
+		Schema::dropIfExists('arquivos');
 	}
 
 }

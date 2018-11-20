@@ -34,7 +34,7 @@ class CreateEstagiosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('estagios');
+		Schema::dropIfExists('estagios');
 	}
 
 }

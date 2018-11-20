@@ -32,7 +32,7 @@ class CreateAlunosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('alunos');
+		Schema::dropIfExists('alunos');
 	}
 
 }

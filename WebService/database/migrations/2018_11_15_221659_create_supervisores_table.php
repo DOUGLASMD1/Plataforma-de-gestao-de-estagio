@@ -32,7 +32,7 @@ class CreateSupervisoresTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('supervisores');
+		Schema::dropIfExists('supervisores');
 	}
 
 }

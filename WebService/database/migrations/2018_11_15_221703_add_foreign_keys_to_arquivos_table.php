@@ -14,8 +14,9 @@ class AddForeignKeysToArquivosTable extends Migration {
 	{
 		Schema::table('arquivos', function(Blueprint $table)
 		{
-			$table->foreign('alunos_rga')->references('rga')->on('alunos')->onUpdate('CASCADE')->onDelete('CASCADE');
-			$table->foreign('supervisor')->references('users_cpf')->on('supervisores')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('coor_siape')->references('SIAPE')->on('coordenadores')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('aluno_rga')->references('rga')->on('alunos')->onUpdate('CASCADE')->onDelete('CASCADE');
+			$table->foreign('super_users_cpf')->references('users_cpf')->on('supervisores')->onUpdate('CASCADE')->onDelete('CASCADE');
 		});
 	}
 	
@@ -29,8 +30,9 @@ class AddForeignKeysToArquivosTable extends Migration {
 	{
 		Schema::table('arquivos', function(Blueprint $table)
 		{
-			$table->dropForeign('alunos_rga');
-			$table->dropForeign('supervisor');
+			$table->dropForeign('coor_siape');
+			$table->dropForeign('aluno_rga');
+			$table->dropForeign('super_users_cpf');
 		});
 	}
 

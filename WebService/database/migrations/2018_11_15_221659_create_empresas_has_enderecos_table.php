@@ -30,7 +30,7 @@ class CreateEmpresasHasEnderecosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('empresas_has_enderecos');
+		Schema::dropIfExists('empresas_has_enderecos');
 	}
 
 }

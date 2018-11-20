@@ -33,7 +33,7 @@ class CreateVagasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('vagas');
+		Schema::dropIfExists('vagas');
 	}
 
 }

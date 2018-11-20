@@ -31,7 +31,7 @@ class CreateAlunosHasVagasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('alunos_has_vagas');
+		Schema::dropIfExists('alunos_has_vagas');
 	}
 
 }

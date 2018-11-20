@@ -30,7 +30,7 @@ class CreateTelefonesHasEmpresasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('telefones_has_empresas');
+		Schema::dropIfExists('telefones_has_empresas');
 	}
 
 }

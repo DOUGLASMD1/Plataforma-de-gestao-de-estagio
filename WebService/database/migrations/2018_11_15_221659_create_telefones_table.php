@@ -29,7 +29,7 @@ class CreateTelefonesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('telefones');
+		Schema::dropIfExists('telefones');
 	}
 
 }
