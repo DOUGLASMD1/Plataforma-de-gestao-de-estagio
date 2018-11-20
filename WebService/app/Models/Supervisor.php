@@ -42,7 +42,7 @@ class Supervisor extends Eloquent
 	public static function InsertSupervisor($data)
 	{
 		$data['password'] = \Hash::make($data['password']);	
-		DB::select('call insert_Supervisor(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',array(
+		DB::select('call insert_Supervisor(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',array(
 			$data['cargo'],
 			$data['areaAtuacao'],
 			$data['cpf'],

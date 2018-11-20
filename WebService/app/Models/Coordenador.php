@@ -48,7 +48,7 @@ class Coordenador extends Eloquent
 	public static function InsertCoordenador($data)
 	{
 		$data['password'] = \Hash::make($data['password']);	
-		DB::select('call insert_Coordenadores(?,?,?,?,?,?,?,?,?)',array(
+		DB::select('call insert_Coordenadores(?,?,?,?,?,?,?,?)',array(
 			$data['cpf'],
 			$data['rg'],
 			$data['nome'],

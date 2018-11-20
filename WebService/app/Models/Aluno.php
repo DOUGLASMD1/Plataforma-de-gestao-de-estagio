@@ -51,7 +51,7 @@ class Aluno extends Eloquent
 	public static function InsertAluno($data)
 	{
 		$data['password'] = \Hash::make($data['password']);	
-		DB::select('call insert_aluno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',array(
+		DB::select('call insert_aluno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',array(
 			$data['Rga'],
 			$data['SemestreAtual'],
 			$data['Curso'],
