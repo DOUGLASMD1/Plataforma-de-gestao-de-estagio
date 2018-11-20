@@ -23,7 +23,7 @@ class CreateFunctionInsertEmpresa extends Migration
         declare cnpjaux varchar(45);
         insert into empresas(cnpj, nome, nome_representante, ramo, created_at, updated_at, deleted_at) 
         values(cnpjEmpresa, nome, nome_repre, ramo, NOW(), NOW(), NULL); 
-        select empresas.cnpj into cnpjaux from empresas where empresas.cnpj = cnpj;
+        select empresas.cnpj into cnpjaux from empresas where empresas.cnpj = cnpjEmpresa;
         
         set @idendereco = (select INSERT_ENDERECO(rua,numero,bairro,cidade,cep,estado,complemento,NULL));
         set @telefone = (select Insert_Telefone(telefone));

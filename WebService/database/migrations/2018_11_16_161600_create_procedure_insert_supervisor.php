@@ -26,7 +26,7 @@ class CreateProcedureInsertSupervisor extends Migration
             declare people varchar(45);
             declare company varchar(45);
         
-            select idrole INTO ID_ROLE from roles where roles.nome = "Supervisor";
+            select roles.idrole INTO ID_ROLE from roles where roles.nome = "Supervisor";
             set people = (select insert_Usuario(cpfis, rg, nome, email, senha, ID_ROLE));
             set company = (select insert_Empresa(cnpj, nomeEmpresa, nome_repre, ramo,rua,numero, bairro, 
                 cidade,cep, estado, complemento, telefone));
