@@ -7,9 +7,9 @@
 
           <li><router-link to="#">Documentos Pendentes</router-link></li>
           <li><router-link to="#">Consultas</router-link></li>
-          <li><router-link to="/cadastrar_vagas">Cadastrar Vagas</router-link></li>
-          <li><router-link to="/cadastrar_regulamento">Cadastrar Regulamento</router-link></li>
-          <li><router-link to="/login">sair</router-link></li>
+          <li><router-link to="/coordenador/cadastrar_vagas">Cadastrar Vagas</router-link></li>
+          <li><router-link to="/coordenador/cadastrar_regulamento">Cadastrar Regulamento</router-link></li>
+          <li><a v-on:click="sair()">sair</a></li>
       </nav-bar>
     </header>
     
@@ -39,10 +39,28 @@ import GridVue from '@/components/layouts/GridVue'
 
 export default {
   name: 'SiteCoordenadorTemplate',
+  data(){
+    return {
+      usuario: false
+    }
+  },
   components: {
     NavBar,
     FooterVue,
     GridVue
+  },
+  created(){
+    let usuarioAux = sessionStorage.getItem('usuario');
+    if(usuarioAux){
+      this.usuario = JSON.parse(usuarioAux);
+    }
+  },
+  methods:{
+    sair(){
+      sessionStorage.clear();
+      this.usuario = false;
+      this.$router.push('/login');
+    }
   }
 }
 </script>

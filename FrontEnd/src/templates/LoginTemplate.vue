@@ -12,10 +12,22 @@ import GridVue from '@/components/layouts/GridVue'
 
 export default {
   name: 'LoginTemplate',
+  data(){
+    return {
+      usuario:false
+    }
+  },
   components: {
     NavBar,
     FooterVue,
     GridVue
+  },
+  created(){
+    let usuarioAux = sessionStorage.getItem('usuario');
+    if(usuarioAux){
+      this.usuario = JSON.parse(usuarioAux);
+      this.$router.push('/');
+    }
   }
 }
 </script>

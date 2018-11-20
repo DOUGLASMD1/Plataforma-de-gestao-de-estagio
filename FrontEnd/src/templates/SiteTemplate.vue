@@ -7,7 +7,7 @@
           <li><router-link to="#">Consultas</router-link></li>
           <li><router-link to="#">Status</router-link></li>
           <li><router-link to="#">Documentos</router-link></li>
-          <li><router-link to="/login">sair</router-link></li>
+          <li><a v-on:click="sair()">sair</a></li>
       </nav-bar>
     </header>
     
@@ -36,11 +36,30 @@ import GridVue from '@/components/layouts/GridVue'
 
 export default {
   name: 'SiteTemplate',
+  data(){
+    return {
+      usuario: false
+    }
+  },
   components: {
     NavBar,
     FooterVue,
     GridVue
+  },
+  created(){
+    let usuarioAux = sessionStorage.getItem('usuario');
+    if(usuarioAux){
+      this.usuario = JSON.parse(usuarioAux);
+    }
+  },
+  methods:{
+    sair(){
+      sessionStorage.clear();
+      this.usuario = false;
+      this.$router.push('/login');
+    }
   }
+
 }
 </script>
 

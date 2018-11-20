@@ -54,9 +54,30 @@ export default {
         email: this.email,
         password: this.password
       })
-    .then(response => {})
+    .then(response => {
+      //console.log(response)
+      if(response.data.token){
+        console.log('login com sucesso')
+        sessionStorage.setItem('usuario', JSON.stringify(response.data));
+        this.$router.push('/');
+
+      }else if(response.data.status == false){
+        console.log('Login não existe')
+        alert('Login invalido')
+      }else{
+        console.log('Erros de validação')
+        let erros = ''
+        for(let erro of Object.values(response.data)){
+          erros += erro + "";
+        }
+        alert(erros)
+      }
+      
+
+    })
     .catch(e => {
       this.errors.push(e)
+      alert("Erro!!! Tente novamente mais tarde");
     })
     }
   }
