@@ -15,16 +15,19 @@ class CreateProcedureInsertAluno extends Migration
     {
         DB::unprepared('drop PROCEDURE if exists insert_aluno ;
         CREATE PROCEDURE insert_aluno(RGAALUNO varchar(25), sem_atual varchar(25),cursos_codCurso INT, cpf varchar(45), 
-        rg varchar(45), nome varchar(45), email varchar(45), senha longtext, id_acao int,
+        rg varchar(45), nome varchar(45), email varchar(45), senha longtext, 
         rua varchar(45),numero varchar(45), bairro varchar(45), cidade varchar(25),cep varchar(45), 
         estado varchar(45), complemento varchar(45), telefoneAluno varchar(15))
         
         begin
+        DECLARE ID_ROLE INT; 
         DECLARE cpfaux INT;
         DECLARE RGA VARCHAR(20);
         DECLARE COORDENADOR INT;
-        set @usuario = (select insert_Usuario(cpf,rg,nome,email,senha,id_acao));
-        
+
+        select idrole INTO ID_ROLE from roles where roles.nome = "Aluno";
+        set @usuario = (select insert_Usuario(cpf,rg,nome,email,senha,ID_ROLE));   
+
         insert into alunos(rga, semestreAtual, users_cpf, cursos_codCurso, created_at, updated_at, deleted_at) 
         values(RGAALUNO,sem_atual,@usuario,cursos_codCurso, NOW(), NOW(), NULL); 
         select alunos.rga INTO RGA FROM alunos where alunos.rga = RGAALUNO;
