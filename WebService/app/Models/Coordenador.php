@@ -57,7 +57,7 @@ class Coordenador extends Eloquent
 			$data['role'],
 			$data['Siape'],
 			$data['Cargo'],
-			$data['Curso']
+			$data['Curso'],
 		));
 	}
 	
