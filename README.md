@@ -10,4 +10,5 @@ Backend:<br />
 
 FrontEnd:<br />
 1 - npm i<br />
-2 - npm rum dev<br />
+2 - npm i -g webpack-dev-server@1<br />
+3 - npm rum dev<br />
