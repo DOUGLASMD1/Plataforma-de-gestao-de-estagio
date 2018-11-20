@@ -50,7 +50,6 @@ class Supervisor extends Eloquent
 			$data['nome'],
 			$data['email'],
 			$data['password'],
-			$data['role'],
 			$data['cnpj'],
 			$data['nomeEmpresa'],
 			$data['nomeRepre'],

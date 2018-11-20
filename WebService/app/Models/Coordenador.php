@@ -54,7 +54,6 @@ class Coordenador extends Eloquent
 			$data['nome'],
 			$data['email'],
 			$data['password'],
-			$data['role'],
 			$data['Siape'],
 			$data['Cargo'],
 			$data['Curso'],

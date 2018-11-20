@@ -60,7 +60,6 @@ class Aluno extends Eloquent
 			$data['nome'],
 			$data['email'],
 			$data['password'],
-			$data['role'],
 			$data['rua'],
 			$data['numero'],
 			$data['bairro'],
