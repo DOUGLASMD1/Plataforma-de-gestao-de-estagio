@@ -1,13 +1,9 @@
 <template>
 <nav class="blue">
     <div class="nav-wrapper">
-        <a :href = "url || '#'" class="brand-logo">{{ logo || 'UFMS' }}</a>
+        <a :href = "url || '#/'" class="brand-logo">{{ logo || 'UFMS' }}</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">Avisos</a></li>
-          <li><a href="#">Documentos Pendentes</a></li>
-          <li><a href="#">Documentos Analisados</a></li>
-          <li><a href="#">Consultas</a></li>
-          <li><a href="#">Supervisores</a></li>
+          <slot/>
         </ul>
     </div>
   </nav>
