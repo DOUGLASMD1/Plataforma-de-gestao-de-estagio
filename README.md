@@ -4,7 +4,7 @@ Esta aplicação é um projeto final da matéria de Programação web do curso d
 
 Backend:<br />
 1 - Importe o banco de dados da pasta BancodeDados <br />
-2 - Execute composer update <br />
+2 - Execute o comando: composer update <br />
 3 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
 4 - Rode o servidor: php artisan serve <br />
 
