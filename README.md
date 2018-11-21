@@ -8,8 +8,9 @@ Backend:<br />
 3 - Renomeie o arquivo .env.example para: .env<br />
 4 - Adicione as configurações da conexão com o banco no arquivo .env. Vale lembrar que você deve usar o nome do banco importado na etapa 1.<br />
 5 - Gere a chave do projeto com o comando: php artisan key:generate<br />
-6 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
-7 - Rode o servidor: php artisan serve <br />
+6 - Instale o passport: php artisan passport:install<br />
+7 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
+8 - Rode o servidor: php artisan serve <br />
 
 FrontEnd:<br />
 1 - npm i<br />
