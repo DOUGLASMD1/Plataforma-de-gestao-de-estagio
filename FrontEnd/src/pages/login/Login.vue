@@ -55,11 +55,18 @@ export default {
         password: this.password
       })
     .then(response => {
-      //console.log(response)
+      console.log(response)
       if(response.data.token){
         console.log('login com sucesso')
         sessionStorage.setItem('usuario', JSON.stringify(response.data));
+
+        if(response.data['roles_idrole']==2){
+          this.$router.push('/coordenador');
+        }else if(response.data['roles_idrole']==4){
+          this.$router.push('/supervisor');
+        }else{
         this.$router.push('/');
+        }
 
       }else if(response.data.status == false){
         console.log('Login não existe')

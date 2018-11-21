@@ -5,11 +5,12 @@
 
       <nav-bar logo="Estágio" url="#/">
 
-          <li><router-link to="#">Documentos Pendentes</router-link></li>
-          <li><router-link to="#">Consultas</router-link></li>
+          <li><router-link to="/coordenador/cadastrar_supervisor">Cadastrar Supervisor</router-link></li>
+          <li><router-link to="/coordenador/cadastrar_aluno">Cadastrar Aluno</router-link></li>
           <li><router-link to="/coordenador/cadastrar_vagas">Cadastrar Vagas</router-link></li>
           <li><router-link to="/coordenador/cadastrar_regulamento">Cadastrar Regulamento</router-link></li>
           <li><a v-on:click="sair()">sair</a></li>
+          <li v-if="usuario">{{usuario.name}}</li>
       </nav-bar>
     </header>
     

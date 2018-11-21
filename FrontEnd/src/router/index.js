@@ -4,6 +4,8 @@ import Home from '@/pages/home/Home'
 import CoordenadorHome from '@/pages/home/CoordenadorHome'
 import Login from '@/pages/login/Login'
 import CadastrarVagas from '@/pages/CadastrarVagas/CadastrarVagas'
+import CadastrarAluno from '@/pages/CadastrarAluno/CadastrarAluno'
+import CadastrarSupervisor from '@/pages/CadastrarSupervisor/CadastrarSupervisor'
 import CadastrarRegulamento from '@/pages/CadastrarRegulamento/CadastrarRegulamento'
 
 Vue.use(Router)
@@ -30,6 +32,16 @@ export default new Router({
       path: '/coordenador/cadastrar_vagas',
       name: 'CadastrarVagas',
       component: CadastrarVagas
+    },
+    {
+      path: '/coordenador/cadastrar_aluno',
+      name: 'CadastrarAluno',
+      component: CadastrarAluno
+    },
+    {
+      path: '/coordenador/cadastrar_supervisor',
+      name: 'CadastrarSupervisor',
+      component: CadastrarSupervisor
     },
     {
       path: '/coordenador/cadastrar_regulamento',
