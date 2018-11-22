@@ -16,8 +16,8 @@ class CreateProcedureReprovaAlunoHasVaga extends Migration
         DB::unprepared('drop procedure if exists reprova_aluno_has_vagas ;
         create procedure reprova_aluno_has_vagas(IDVAGA INT)
     begin	
-         UPDATE alunos_has_vagas SET status = "R", updated_at = NOW()
-         WHERE  vagas_idVagas = IDVAGA AND status = "EA";
+         UPDATE alunos_has_vagas SET alunos_has_vagas.status = "R", updated_at = NOW()
+         WHERE vagas_idVagas = IDVAGA AND alunos_has_vagas.status = "EA";
     END ;');
     }
 

@@ -18,6 +18,10 @@ class CreateProcedureUpdateVaga extends Migration
     begin
         UPDATE vagas SET Titulo = TITULO, Area = AREA, Requisitos_para_vaga = REQUISITOS, status = STATUS, updated_at = NOW()
         WHERE  idVagas = IDVAGA;
+
+        IF STATUS = "E" THEN
+		    call reprova_aluno_has_vagas(IDVAGA);
+	    END IF;
     END ;');
     }
 

@@ -18,6 +18,9 @@ class CreateProcedureInsertAlunoHasVaga extends Migration
     begin
          insert into alunos_has_vagas(alunos_rga, vagas_idVagas, created_at, updated_at, deleted_at) 
              values(ALUNO_RGA, IDVAGA, NOW(), NOW(), NULL);
+
+             UPDATE estagios SET status = "PS", updated_at = NOW()
+             WHERE  alunos_rga = ALUNO_RGA;
     END ; ');
     }
 
