@@ -49,7 +49,7 @@ export default {
   methods:{
     login(){
       console.log('Ok');
-      this.$http.post(this.urlApi+`login`,{
+      this.$http.post(this.$urlApi+`login`,{
         email: this.email,
         password: this.password
       })
