@@ -22,7 +22,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property \Carbon\Carbon $updated_at
  * @property string $deleted_at
  * 
- * @property \App\Models\Supervisore $supervisore
+ * @property \App\Models\Supervisor $supervisor
  * @property \Illuminate\Database\Eloquent\Collection $alunos
  *
  * @package App\Models
@@ -37,7 +37,7 @@ class Vaga extends Eloquent
 		'Area',
 		'Requisitos_para_Vaga',
 		'supervisor',
-		//'status'
+		'status'
 	];
 
 	public static function registerVaga($data)
@@ -48,9 +48,21 @@ class Vaga extends Eloquent
 		return $vaga;
 	}
 
-	public function supervisore()
+	public static function updateVaga($data, $idVagas)
 	{
-		return $this->belongsTo(\App\Models\Supervisore::class, 'supervisor');
+		$vaga = self::find($idVagas);
+		if(is_null($vaga))
+		{
+			return false;
+		}
+		$vaga->fill($data);
+		$vaga->save();
+		return $vaga;
+	}
+
+	public function supervisoR()
+	{
+		return $this->belongsTo('\App\Models\Supervisor');
 	}
 
 	public function alunos()

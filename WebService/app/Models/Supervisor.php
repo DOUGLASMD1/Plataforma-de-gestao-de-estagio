@@ -39,6 +39,8 @@ class Supervisor extends Eloquent
 		'Area_Atuacao'
 	];
 
+	protected $table = 'supervisores';
+
 	public static function InsertSupervisor($data)
 	{
 		$data['password'] = \Hash::make($data['password']);	
@@ -85,8 +87,15 @@ class Supervisor extends Eloquent
 		return $this->hasMany(\App\Models\Estagio::class, 'supervisor');
 	}
 
-	public function vagas()
+	public static function vagas($supervisor)
 	{
-		return $this->hasMany(\App\Models\Vaga::class, 'supervisor');
+		$vagas = DB::table('vagas')
+            ->join('supervisores', 'supervisores.users_cpf', '=', 'vagas.supervisor')
+			->select('vagas.idVagas', 'vagas.Titulo', 'vagas.Area',
+			'vagas.Requisitos_para_Vaga','vagas.status','vagas.idVagas','vagas.created_at',
+			'vagas.updated_at')
+			->where('supervisores.users_cpf', '=', $supervisor)
+			->get();
+		return $vagas;
 	}
 }

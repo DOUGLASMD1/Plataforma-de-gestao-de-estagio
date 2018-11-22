@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Supervisor;
+use App\Models\AlunosHasVaga;
+use App\Models\Vaga;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use App\Http\Controllers\Api\BaseController;
 
-class SupervisorController extends Controller
+class SupervisorController extends BaseController
 {
     public function register(Request $request)
     {
@@ -32,5 +35,16 @@ class SupervisorController extends Controller
             $user = User::where('email' , $data['email'])->first(); 
             $user->token = $user->createToken($user->email)->accessToken;
             return $user;
+    }
+
+    public function vagasSupervisor($cpf){
+        $supervisor = Supervisor::vagas($cpf);
+        return $this->sendResponse($supervisor->toArray(), 'Vagas recuperadas com sucesso.');
+    }
+
+    public function updateAlunoVaga(Request $request){
+        $data = $request->all();
+        AlunosHasVaga::updateAlunoVaga($data);
+        return $this->sendResponse('', 'Status do aluno atualizado com sucesso.');    
     }
 }

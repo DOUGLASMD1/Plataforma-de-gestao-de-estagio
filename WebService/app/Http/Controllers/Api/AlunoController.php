@@ -33,4 +33,10 @@ class AlunoController extends Controller
             $user->token = $user->createToken($user->email)->accessToken;
             return $user;
     }
+
+    public function candidateVagas(Request $request){
+        $data = $request->all();
+        Aluno::candidateVagas($data);
+        return response()->json(['response' => 'Canditadura a vaga efetuada com sucesso'], 200);
+    }
 }

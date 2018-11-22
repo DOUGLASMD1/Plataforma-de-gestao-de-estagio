@@ -95,11 +95,12 @@ class Aluno extends Eloquent
 					->withTimestamps();
 	}
 
-	public function vagas()
-	{
-		return $this->belongsToMany(\App\Models\Vaga::class, 'alunos_has_vagas', 'alunos_rga', 'vagas_idVagas')
-					->withPivot('status', 'deleted_at')
-					->withTimestamps();
+	public static function candidateVagas($data)
+	{	
+		DB::select('call insert_aluno_has_vagas(?,?)',array(
+			$data['Rga'],
+			$data['idVaga'],
+		));
 	}
 
 	public function arquivos()

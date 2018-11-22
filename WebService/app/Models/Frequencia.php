@@ -50,6 +50,26 @@ class Frequencia extends Eloquent
 		'estagio_idestagio'
 	];
 
+	public static function registerFrequencia($data)
+	{	
+		$freq = new Frequencia();
+		$freq->fill($data);
+		$freq->save();
+		return $freq;
+	}
+
+	public static function updateFrequencia($data, $idFrequencia)
+	{
+		$freq = self::find($idFrequencia);
+		if(is_null($freq))
+		{
+			return false;
+		}
+		$freq->fill($data);
+		$freq->save();
+		return $freq;
+	}
+
 	public function estagio()
 	{
 		return $this->belongsTo(\App\Models\Estagio::class, 'estagio_idestagio');
