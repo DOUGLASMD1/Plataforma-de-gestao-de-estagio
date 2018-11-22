@@ -8,6 +8,8 @@
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Facades\DB;
+
 
 /**
  * Class Instituicao
@@ -50,9 +52,14 @@ class Instituicao extends Eloquent
 		return $this->belongsTo(\App\Models\Endereco::class, 'enderecos_idendereco');
 	}
 
-	public function campuses()
+	public static function campuses($campus)
 	{
-		return $this->hasMany(\App\Models\Campus::class, 'instituicao_CNPJ');
+		$campus = DB::table('cursos')
+		->join('campus', 'campus.nome', '=', 'cursos.campus_nome')
+		->select('codCurso','nomeCurso')
+		->where('campus_nome', '=', $campus)
+		->get();
+		return $campus;
 	}
 
 	public function telefones_has_instituicos()

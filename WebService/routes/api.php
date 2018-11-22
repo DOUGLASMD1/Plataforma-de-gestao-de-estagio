@@ -6,7 +6,6 @@ Route::post('/login', 'Api\UserController@login');
 
 //Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 
-
 Route::middleware('auth:api')->group( function () {
     Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 	Route::post('/register-aluno', 'Api\AlunoController@register');
@@ -25,6 +24,7 @@ Route::middleware('auth:api')->group( function () {
     Route::get('/vagas', 'Api\VagaController@vagas');
     Route::get('/vaga-alunos', 'Api\VagaController@alunos');
     Route::get('/vagas-supervisor/{cpf}', 'Api\SupervisorController@vagasSupervisor');
+    Route::get('/campus-cursos/{campusnome}', 'Api\CursoController@cursos');
 });
 
 
