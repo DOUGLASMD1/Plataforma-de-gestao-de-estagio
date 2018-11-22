@@ -6,7 +6,7 @@
           <li><router-link to="#">Documentos Pendentes</router-link></li>
           <li><router-link to="#">Consultas</router-link></li>
           <li><router-link to="#">Status</router-link></li>
-          <li><router-link to="#">Documentos</router-link></li>
+          <li><router-link to="#">Empresa</router-link></li>
           <li v-if="usuario">{{usuario.name}}</li>
           <li><a v-on:click="sair()">sair</a></li>
       </nav-bar>
@@ -36,7 +36,7 @@ import FooterVue from '@/components/layouts/FooterVue'
 import GridVue from '@/components/layouts/GridVue'
 
 export default {
-  name: 'SiteTemplate',
+  name: 'SiteSupervisorTemplate',
   data(){
     return {
       usuario: false
@@ -49,6 +49,7 @@ export default {
   },
   created(){
     let usuarioAux = sessionStorage.getItem('usuario');
+
     if(usuarioAux){
       this.usuario = JSON.parse(usuarioAux);
     }else{

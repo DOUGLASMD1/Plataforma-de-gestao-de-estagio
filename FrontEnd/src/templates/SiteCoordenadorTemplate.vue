@@ -51,10 +51,17 @@ export default {
     GridVue
   },
   created(){
+
     let usuarioAux = sessionStorage.getItem('usuario');
-    if(usuarioAux){
-      this.usuario = JSON.parse(usuarioAux);
-    }
+
+    console.log(usuarioAux);
+
+      if(usuarioAux){
+        this.usuario = JSON.parse(usuarioAux);
+
+      }else{
+        this.$router.push('/login');
+      }
   },
   methods:{
     sair(){

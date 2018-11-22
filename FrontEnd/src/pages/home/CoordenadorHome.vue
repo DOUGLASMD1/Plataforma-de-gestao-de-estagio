@@ -9,7 +9,7 @@
 import SiteCoordenadorTemplate from '@/templates/SiteCoordenadorTemplate'
 
 export default {
-  name: 'Home',
+  name: 'CoordenadorHome',
   data () {
     return {
     }
