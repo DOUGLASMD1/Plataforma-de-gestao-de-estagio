@@ -9,7 +9,10 @@ import EditarVagas from '@/pages/Vagas/EditarVagas'
 import CadastrarAluno from '@/pages/CadastrarAluno/CadastrarAluno'
 import CadastrarSupervisor from '@/pages/CadastrarSupervisor/CadastrarSupervisor'
 import CadastrarRegulamento from '@/pages/CadastrarRegulamento/CadastrarRegulamento'
-
+import EditarFrequencia from '@/pages/Empresas/EditarFrequencia'
+import Frequencia from '@/pages/Empresas/Frequencia'
+import AprovarVaga from '@/pages/VagasAluno/AprovarVaga'
+import CandidatarVaga from '@/pages/VagasAluno/CandidatarVaga'
 
 Vue.use(Router)
 
@@ -55,6 +58,31 @@ export default new Router({
       path: '/coordenador/cadastrar_regulamento',
       name: 'CadastrarRegulamento',
       component: CadastrarRegulamento
+    },
+    {
+      path: '/supervisor/editar_vaga',
+      name: 'EditarVagas',
+      component: EditarVagas
+    },
+    {
+      path: '/frequencia',
+      name: 'Frequencia',
+      component: Frequencia
+    },
+    {
+      path: '/candidatar_vaga',
+      name: 'CandidatarVaga',
+      component: CandidatarVaga
+    },
+    {
+      path: '/supervisor/Frequencia',
+      name: 'EditarFrequencia',
+      component: EditarFrequencia
+    },
+    {
+      path: '/supervisor/aprovar_vaga',
+      name: 'AprovarVaga',
+      component: AprovarVaga
     }
   ]
 })
