@@ -2,15 +2,16 @@
 Esta aplicação é um projeto final da matéria de Programação web do curso de sistemas de informação - CPAN-UFMS. A aplicação tem como objetivo gerenciar todo o processo de estágio.
 
 
-Backend:<br />
-1 - Importe o banco de dados da pasta BancodeDados <br />
-2 - Execute o comando a seguir para gerar a pasta vendor: composer update <br />
-3 - Renomeie o arquivo .env.example para: .env<br />
-4 - Adicione as configurações da conexão com o banco no arquivo .env. Vale lembrar que você deve usar o nome do banco importado na etapa 1.<br />
-5 - Gere a chave do projeto com o comando: php artisan key:generate<br />
-6 - Instale o passport: php artisan passport:install<br />
-7 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
-8 - Rode o servidor: php artisan serve <br />
+WebService:<br />
+1 - Crie um banco com o nome: estagio_ufms <br />
+2 - Importe o banco de dados da pasta BancodeDados <br />
+3 - Execute o comando a seguir para gerar a pasta vendor: composer update <br />
+4 - Renomeie o arquivo .env.example para: .env<br />
+5 - Adicione as configurações da conexão com o banco no arquivo .env. Vale lembrar que você deve usar o nome do banco declarado na etapa 1.<br />
+6 - Gere a chave do projeto com o comando: php artisan key:generate<br />
+7 - Instale o passport: php artisan passport:install<br />
+8 - Gere um cliente passport para sua aplicação: php artisan passport:client --personal <br />
+9 - Rode o servidor: php artisan serve <br />
 
 FrontEnd:<br />
 1 - npm i<br />
