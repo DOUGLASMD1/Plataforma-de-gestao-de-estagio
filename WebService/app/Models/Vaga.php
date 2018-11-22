@@ -66,16 +66,14 @@ class Vaga extends Eloquent
 		return $this->belongsTo('\App\Models\Supervisor');
 	}
 
-	public function alunos()
+	public static function alunos()
 	{
-		/*$vagas = DB::table('alunos_has_vagas')
-            ->join('supervisores', 'supervisores.users_cpf', '=', 'vagas.supervisor')
-			->select('vagas.idVagas', 'vagas.Titulo', 'vagas.Area',
-			'vagas.Requisitos_para_Vaga','vagas.status','vagas.idVagas')
-			->where('status', '=', 'A')
+		$alunos = DB::table('alunos_has_vagas')
+			->join('alunos', 'alunos.rga', '=', 'alunos_has_vagas.alunos_rga')
+			->join('vagas', 'vagas.idVagas', '=', 'alunos_has_vagas.vagas_idVagas')
+			->select('alunos_rga', 'vagas_idVagas', 'alunos_has_vagas.status')
 			->get();
-		return $vagas;
-		*/
+		return $alunos;
 	}
 
 	public static function vagas()

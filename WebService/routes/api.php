@@ -6,6 +6,7 @@ Route::post('/login', 'Api\UserController@login');
 
 //Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 
+Route::get('/vaga-alunos', 'Api\VagaController@alunos');
 
 
 Route::middleware('auth:api')->group( function () {

@@ -60,5 +60,10 @@ class VagaController extends BaseController
         $vagas = Vaga::vagas();
         return $this->sendResponse($vagas->toArray(), 'Vagas recuperadas com sucesso.');
     }
+
+    public function alunos(){
+        $alunos = Vaga::alunos();
+        return $this->sendResponse($alunos->toArray(), 'Vagas recuperadas com sucesso.');
+    }
 }
     
