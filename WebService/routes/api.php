@@ -4,14 +4,14 @@ use Illuminate\Http\Request;
 
 Route::post('/login', 'Api\UserController@login');
 
-//Route::post('/register-coordenador', 'Api\CoordenadorController@register');
+Route::post('/register-coordenador', 'Api\CoordenadorController@register');
+Route::post('/register-vaga', 'Api\VagaController@register');
 
 Route::middleware('auth:api')->group( function () {
-    Route::post('/register-coordenador', 'Api\CoordenadorController@register');
+    //Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 	Route::post('/register-aluno', 'Api\AlunoController@register');
     Route::post('/register-supervisor', 'Api\SupervisorController@register');
-    Route::post('/register-vaga', 'Api\VagaController@register');
-    Route::post('/register-frequencia', 'Api\FrequenciaController@register');
+       Route::post('/register-frequencia', 'Api\FrequenciaController@register');
     Route::post('/registe-aluno-vaga', 'Api\AlunoController@candidateVagas');
     Route::post('/submit-file', 'Api\ArquivoController@uploadArquivo');
     
