@@ -17,3 +17,11 @@ FrontEnd:<br />
 1 - npm i<br />
 2 - npm i -g webpack-dev-server@1<br />
 3 - npm rum dev<br />
+
+Operações:<br />
+
+Você pode utilizar o postman para testar a api do WebService. <br />
+O banco que você importou ja vem com algumas informações inseridas, são elas: cursos, campus, instituição e roles. Para saber quais informações são necessarias para registrar seus dados, consulte os metodos dos models, neles que conterão os dados necessarios para realizar os registros. Antes de testar o FrotEnd lembre-se de criar um usuario primeiro. <br />
+<br />
+
+Caso tenha alguma duvida você pode entrar em contato com os desenvolvedores a partir do email: michaeldouglass.ferreira@gmail.com<br />
