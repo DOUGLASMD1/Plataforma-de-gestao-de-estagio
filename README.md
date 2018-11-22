@@ -4,7 +4,7 @@ Esta aplicação é um projeto final da matéria de Programação web do curso d
 
 WebService:<br />
 1 - Crie um banco com o nome "estagio_ufms" e formato "utf8mb4_unicode_ci" <br />
-2 - Importe o banco de dados da pasta BancodeDados <br />
+2 - Apos criar o banco importe o banco de dados da pasta BancodeDados <br />
 3 - Execute o comando a seguir para gerar a pasta vendor: composer update <br />
 4 - Renomeie o arquivo .env.example para: .env<br />
 5 - Adicione as configurações da conexão com o banco no arquivo .env. Vale lembrar que você deve usar o nome do banco declarado na etapa 1.<br />
