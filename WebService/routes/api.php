@@ -18,7 +18,6 @@ Route::middleware('auth:api')->group( function () {
     
     Route::put('/update-vaga/{idVagas}', 'Api\VagaController@updateVaga');
     Route::put('/update-estagio/{idEstagio}', 'Api\EstagioController@updateEstagio');    
-    Route::put('/update-estagio/{idEstagio}', 'Api\EstagioController@updateEstagio');  
     Route::put('/update-frequencia/{idFrequencia}', 'Api\FrequenciaController@updateFrequencia');        
     Route::post('/update-aluno-vaga', 'Api\SupervisorController@updateAlunoVaga');    
 
