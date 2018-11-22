@@ -55,5 +55,10 @@ class VagaController extends BaseController
         }
         return $this->sendResponse($vaga->toArray(), 'Vaga atualizada com sucesso.');
     }
+
+    public function vagas(){
+        $vagas = Vaga::vagas();
+        return $this->sendResponse($vagas->toArray(), 'Vagas recuperadas com sucesso.');
+    }
 }
     

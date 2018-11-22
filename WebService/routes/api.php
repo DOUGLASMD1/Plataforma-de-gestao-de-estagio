@@ -7,6 +7,7 @@ Route::post('/login', 'Api\UserController@login');
 //Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 
 
+
 Route::middleware('auth:api')->group( function () {
     Route::post('/register-coordenador', 'Api\CoordenadorController@register');
 	Route::post('/register-aluno', 'Api\AlunoController@register');
@@ -22,6 +23,7 @@ Route::middleware('auth:api')->group( function () {
     Route::post('/update-aluno-vaga', 'Api\SupervisorController@updateAlunoVaga');    
     Route::post('/submit-file', 'Api\ArquivoController@uploadArquivo');
     Route::get('/user', 'Api\UserController@userDetails');
+    Route::get('/vagas', 'Api\VagaController@vagas');
 });
 
 

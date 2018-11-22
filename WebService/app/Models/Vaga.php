@@ -8,6 +8,7 @@
 namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class Vaga
@@ -67,8 +68,24 @@ class Vaga extends Eloquent
 
 	public function alunos()
 	{
-		return $this->belongsToMany(\App\Models\Aluno::class, 'alunos_has_vagas', 'vagas_idVagas', 'alunos_rga')
-					->withPivot('status', 'deleted_at')
-					->withTimestamps();
+		/*$vagas = DB::table('alunos_has_vagas')
+            ->join('supervisores', 'supervisores.users_cpf', '=', 'vagas.supervisor')
+			->select('vagas.idVagas', 'vagas.Titulo', 'vagas.Area',
+			'vagas.Requisitos_para_Vaga','vagas.status','vagas.idVagas')
+			->where('status', '=', 'A')
+			->get();
+		return $vagas;
+		*/
+	}
+
+	public static function vagas()
+	{
+		$vagas = DB::table('vagas')
+            //->join('supervisores', 'supervisores.users_cpf', '=', 'vagas.supervisor')
+			->select('vagas.idVagas', 'vagas.Titulo', 'vagas.Area',
+			'vagas.Requisitos_para_Vaga','vagas.status','vagas.idVagas')
+			->where('status', '=', 'A')
+			->get();
+		return $vagas;
 	}
 }
