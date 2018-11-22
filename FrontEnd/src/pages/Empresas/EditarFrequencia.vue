@@ -1,6 +1,6 @@
 <template>
 
-<site-template>
+<site-supervisor-template>
 
 <div class="row">
   <h3>Editar Frequência</h3>
@@ -18,12 +18,14 @@
           <label for="data_fim">{{data_fim}}</label>
         </div>
 
-        Descricão: <br>
+      </div>
+
+      <div class="row">
+        Descricão Aluno: <br>
         <div class="input-field col s7">
-          <textarea required="required" v-model="textarea" class="materialize-textarea"></textarea>
+          <textarea disabled value="" id="disabled" v-model="textarea" class="materialize-textarea"></textarea>
           <label for="textarea">{{textarea}}</label>
         </div>
-
       </div>
 
       <div class="row">
@@ -34,34 +36,22 @@
           <label for="textarea1">{{textarea1}}</label>
         </div>
 
-        <div class="input-field col s2">
-          <input required="required" placeholder="ID do estágio" v-model="id_estagio" type="text" class="validate">
-          <label for="data_fim"></label>
-        </div>
-
-        <div class="input-field col s1">
-          <input required="required" v-model="aprovado" type="checkbox" class="validate">
-          <label for="area">Aprovado</label>
-        </div>
-
-        <div class="input-field col s1">
-          <input required="required" v-model="pendente" type="checkbox" class="validate">
-          <label for="area">Pendente</label>
-        </div>
-
       </div>
 
-      <a v-on:click="cadastrarFrequencia()" type="submit" class=" col s2 waves-effect waves-light btn">Enviar</a>
+      <a v-on:click="cadastrarFrequencia()" class="waves-effect waves-light btn-large"><i class="material-icons left">check</i>Aprovar</a>
+      <a v-on:click="cadastrarFrequencia()" class="waves-effect waves-light btn-large"><i class="material-icons left">error</i>Pendente</a>
+    
   </form>
 
 
 </div>
-  </site-template>
+  </site-supervisor-template>
 
 </template>
 
 <script>
-import SiteTemplate from '@/templates/SiteTemplate'
+import SiteSupervisorTemplate from '@/templates/SiteSupervisorTemplate'
+
 
 export default {
   name: 'EditarFrequencia',
@@ -76,7 +66,7 @@ export default {
     }
   },
   components:{
-      SiteTemplate
+      SiteSupervisorTemplate
   }, 
   methods:{
     cadastrarVagas(){

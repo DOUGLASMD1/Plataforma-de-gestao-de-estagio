@@ -3,7 +3,7 @@
 <site-template>
 
 <div class="row">
-  <h3> Cadastro de Vagas </h3>
+  <h3> Se candidatar na Vaga </h3>
 
     <form class="col s12" action="" method="POST">
       <div class="row">

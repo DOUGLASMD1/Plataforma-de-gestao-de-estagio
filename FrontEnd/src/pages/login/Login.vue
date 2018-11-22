@@ -57,6 +57,9 @@ export default {
       console.log(response)
       if(response.data.token){
         console.log('login com sucesso')
+
+        //this.$store.commit('setToken', response.data.token)
+
         sessionStorage.setItem('usuario', JSON.stringify(response.data));
 
         if(response.data['roles_idrole']==2){

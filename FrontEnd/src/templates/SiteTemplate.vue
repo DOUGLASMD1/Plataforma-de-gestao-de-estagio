@@ -5,8 +5,8 @@
       <nav-bar logo="Estágio" url="#/">
           <li><router-link to="#">Documentos Pendentes</router-link></li>
           <li><router-link to="#">Consultas</router-link></li>
-          <li><router-link to="#">Status</router-link></li>
-          <li><router-link to="#">Documentos</router-link></li>
+          <li><router-link to="/candidatar_vaga">Candidatar a Vaga</router-link></li>
+          <li><router-link to="/frequencia">Frequencia</router-link></li>
           <li v-if="usuario">{{usuario.name}}</li>
           <li><a v-on:click="sair()">sair</a></li>
       </nav-bar>

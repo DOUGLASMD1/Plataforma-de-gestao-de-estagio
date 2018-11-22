@@ -4,9 +4,9 @@
     <header>
       <nav-bar logo="Estágio" url="#/">
           <li><router-link to="#">Documentos Pendentes</router-link></li>
-          <li><router-link to="#">Consultas</router-link></li>
-          <li><router-link to="#">Status</router-link></li>
-          <li><router-link to="#">Empresa</router-link></li>
+          <li><router-link to="/supervisor/aprovar_vaga">Aprovar Vaga</router-link></li>
+          <li><router-link to="/supervisor/editar_vaga">Editar Vaga</router-link></li>
+          <li><router-link to="/supervisor/Frequencia">Frequencia</router-link></li>
           <li v-if="usuario">{{usuario.name}}</li>
           <li><a v-on:click="sair()">sair</a></li>
       </nav-bar>

@@ -14,6 +14,16 @@
         </div>
 
         <div class="input-field col s2">
+          <input required="required" placeholder="Semestre" v-model="semestre" type="text" class="validate">
+          <label for="rga"></label>
+        </div>
+
+        <div class="input-field col s2">
+          <input required="required" placeholder="Curso" v-model="curso" type="text" class="validate">
+          <label for="rga"></label>
+        </div>
+
+        <div class="input-field col s2">
           <input required="required" placeholder="CPF do aluno" v-model="cpf" type="text" class="validate">
           <label for="cpf"></label>
         </div>
@@ -34,7 +44,12 @@
         </div>
 
         <div class="input-field col s2">
-          <input required="required" placeholder="Senha do aluno" v-model="senha" type="text" class="validate">
+          <input required="required" placeholder="Senha de acesso" v-model="senha" type="password" class="validate">
+          <label for="senha"></label>
+        </div>
+
+        <div class="input-field col s2">
+          <input required="required" placeholder="Confirmacao da senha" v-model="senha_conf" type="password" class="validate">
           <label for="senha"></label>
         </div>
 
@@ -109,7 +124,8 @@ export default {
       rg:'',
       nome:'',
       email:'',
-      password:'',
+      senha:'',
+      senha_conf:'',
       rua:'',
       numero:'',
       bairro:'',
@@ -126,7 +142,7 @@ export default {
   methods:{
     cadastrarAluno(){
       //console.log('Ok');
-      this.$http.post(this.urlApi+`register-aluno`,{
+      this.$http.post(this.$urlApi+`register-aluno`,{
         Rga: this.rga,
         SemestreAtual: this.semestre,
         Curso: this.curso,
@@ -135,6 +151,7 @@ export default {
         nome: this.nome,
         email: this.email,
         password: this.password,
+        password_confirmation: this.senha_conf,
         rua: this.rua,
         numero: this.numero,
         bairro: this.bairro,
@@ -143,7 +160,7 @@ export default {
         estado: this.estado,
         complemento: this.complemento,
         telefone: this.telefone
-      }, {"headers":{"authorization":"Bearer"+this.usuario.token}})
+      }, {"headers":{"authorization":"Bearer "+this.$store.getters.getToken}})
     .then(response => {})
     .catch(e => {
       this.errors.push(e)

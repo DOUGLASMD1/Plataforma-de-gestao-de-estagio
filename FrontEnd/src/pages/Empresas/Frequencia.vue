@@ -18,26 +18,31 @@
           <label for="data_fim"></label>
         </div>
 
-        Descricão: <br>
+      </div>
+
+      <div class="row">
+        Descricão Aluno: <br>
         <div class="input-field col s7">
           <textarea required="required" v-model="textarea" class="materialize-textarea"></textarea>
           <label for="textarea"></label>
         </div>
-
       </div>
 
       <div class="row">
 
         Descrição Supervisor:<br>
+        <div class="row">
         <div class="input-field col s7">
-          <textarea required="required" v-model="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1"></label>
+          <input disabled value="" id="disabled" type="text" class="validate">
+          <label for="disabled"></label>
         </div>
+      </div>
 
-        <div class="input-field col s2">
+        <!--<div class="input-field col s2">
           <input required="required" placeholder="ID do estágio" v-model="id_estagio" type="text" class="validate">
           <label for="data_fim"></label>
         </div>
+        
 
         <div class="input-field col s1">
           <input required="required" v-model="aprovado" type="checkbox" class="validate">
@@ -48,16 +53,13 @@
           <input required="required" v-model="pendente" type="checkbox" class="validate">
           <label for="area">Pendente</label>
         </div>
-
+        -->
       </div>
 
       <a v-on:click="cadastrarFrequencia()" type="submit" class=" col s2 waves-effect waves-light btn">Enviar</a>
   </form>
-
-
 </div>
   </site-template>
-
 </template>
 
 <script>
@@ -76,7 +78,7 @@ export default {
     }
   },
   components:{
-      SiteTemplate
+      SiteTemplate,
   }, 
   methods:{
     cadastrarVagas(){

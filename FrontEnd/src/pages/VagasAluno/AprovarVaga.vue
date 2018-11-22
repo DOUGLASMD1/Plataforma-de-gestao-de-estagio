@@ -1,6 +1,6 @@
 <template>
 
-<site-template>
+<site-supervisor-template>
 
 <div class="row">
   <h3> Aprovar Vaga </h3>
@@ -18,22 +18,16 @@
           <label for="area">{{vaga}}</label>
         </div>
 
-        <div class="input-field col s2">
-          <input required="required" v-model="aprovado" type="checkbox" class="validate">
-          <label for="area">Aprovado</label>
-        </div>
-
-        <div class="input-field col s2">
-          <input required="required" v-model="reprovado" type="checkbox" class="validate">
-          <label for="area">Reprovado</label>
-        </div>
 
       </div>
 
-        <a v-on:click="aprovarVagas()" type="submit" class=" col s2 waves-effect waves-light btn">Candidatar</a>
+      <a v-on:click="aprovarVagas()" class="waves-effect waves-light btn-large"><i class="material-icons left">check</i>Aprovar</a>
+      <a v-on:click="aprovarVagas()" class="waves-effect waves-light btn-large"><i class="material-icons left">close</i>Reprovar</a>
+
+
     </form>
 </div>
-  </site-template>
+  </site-supervisor-template>
 
 </template>
 
